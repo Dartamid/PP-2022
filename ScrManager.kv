@@ -1,0 +1,618 @@
+WindowManager:
+    TutorialPageOne:
+    TutorialPageTwo:
+    ConstructorPageOne:
+
+# ====================================================================================
+# /////////////// Первая страница обучения использования приложения //////////////////
+# ====================================================================================
+
+<TutorialPageOne>:
+    orientation: 'vertical'
+
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            source: 'images/tutorial_page_1.png'
+            size_hint: 0.7, 0.7
+            pos_hint: {'center_x': 0.5, 'top': 1}
+
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            size_hint:  0.3, 0.05
+            pos_hint: {'top': 1, 'right': 1}
+            font_size: self.width/6
+            text: 'Пропустить'
+
+            on_release:
+                root.skip_tutorial()
+
+        Button
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 1}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Далее'
+
+            on_release:
+                root.switch_next_screen()
+
+        Label
+            color: 0.28, 0, 1, 1
+            font_size: self.width/9
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
+            size_hint: 0.6, 0.3
+            text: 'с помощью\nконструктора вы\nможете создать свой\nсобственный бланк'
+            text_color: 1, 0, 0, 1
+            halign: 'center'
+
+
+
+
+# ====================================================================================
+# /////////////// Вторая страница обучения использования приложения //////////////////
+# ====================================================================================
+
+<TutorialPageTwo>:
+    orientation: 'vertical'
+    padding: 15
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            source: 'images/tutorial_page_2.jpg'
+            size_hint: 0.8, 0.8
+            pos_hint: {'center_x': 0.5, 'top': 1.05}
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 0.2}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Назад'
+
+            on_release:
+                root.switch_screen_back()
+
+        Button
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 1}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Далее'
+
+            on_release:
+                root.switch_next_screen()
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            size_hint:  0.3, 0.05
+            pos_hint: {'top': 1, 'right': 1}
+            font_size: self.width/6
+            text: 'Пропустить'
+
+            on_release:
+                root.skip_tutorial()
+
+        Label
+            color: 0.28, 0, 1, 1
+            font_size: self.width/9
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
+            size_hint: 0.6, 0.3
+            text: 'Количество вариантов\nбланка - это количество\nвариантов проводимой\nработы'
+            text_color: 1, 0, 0, 1
+            halign: 'center'
+
+
+# ====================================================================================
+# /////////////// Третья страница обучения использования приложения //////////////////
+# ====================================================================================
+
+<TutorialPageThree>:
+    orientation: 'vertical'
+    padding: 15
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            source: 'images/tutorial_page_2.jpg'
+            size_hint: 0.8, 0.8
+            pos_hint: {'center_x': 0.5, 'top': 1.05}
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 0.2}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Назад'
+
+            on_release:
+                root.switch_screen_back()
+
+        Button
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 1}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Далее'
+
+            on_release:
+                root.switch_next_screen()
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            size_hint:  0.3, 0.05
+            pos_hint: {'top': 1, 'right': 1}
+            font_size: self.width/6
+            text: 'Пропустить'
+
+            on_release:
+                root.skip_tutorial()
+
+        Label
+            color: 0.28, 0, 1, 1
+            font_size: self.width/9
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
+            size_hint: 0.6, 0.3
+            text: 'Количество вариантов\nответа - это количество\nвариантов ответов\nв заданиях'
+            text_color: 1, 0, 0, 1
+            halign: 'center'
+
+
+
+
+# ====================================================================================
+# ///////////// Четвертая страница обучения использования приложения /////////////////
+# ====================================================================================
+
+<TutorialPageFour>:
+    orientation: 'vertical'
+    padding: 15
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            source: 'images/tutorial_page_2.jpg'
+            size_hint: 0.8, 0.8
+            pos_hint: {'center_x': 0.5, 'top': 1.05}
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 0.2}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Назад'
+
+            on_release:
+                root.switch_screen_back()
+
+        Button
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 1}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Далее'
+
+            on_release:
+                root.switch_next_screen()
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            size_hint:  0.3, 0.05
+            pos_hint: {'top': 1, 'right': 1}
+            font_size: self.width/6
+            text: 'Пропустить'
+
+            on_release:
+                root.skip_tutorial()
+
+        Label
+            color: 0.28, 0, 1, 1
+            font_size: self.width/9
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
+            size_hint: 0.6, 0.3
+            text: 'Количество вопросов - это\nколичество заданий в\nработе'
+            text_color: 1, 0, 0, 1
+            halign: 'center'
+
+
+
+
+# ====================================================================================
+# ///////////// Пятая страница обучения использования приложения /////////////////
+# ====================================================================================
+
+<TutorialPageFive>:
+    orientation: 'vertical'
+    padding: 15
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            source: 'images/tutorial_page_2.jpg'
+            size_hint: 0.8, 0.8
+            pos_hint: {'center_x': 0.5, 'top': 1.05}
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 0.2}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Назад'
+
+            on_release:
+                root.switch_screen_back()
+
+        Button
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 1}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Готово'
+
+            on_release:
+                root.switch_to_constructor()
+
+        Label
+            color: 0.28, 0, 1, 1
+            font_size: self.width/9
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
+            size_hint: 0.6, 0.3
+            text: 'Последовательность\nответов - это ответы на\nзадания в порядке вопросов\nчтобы система могла\nпроверять их за Вас'
+            text_color: 1, 0, 0, 1
+            halign: 'center'
+
+
+
+# ====================================================================================
+# ////////////////////////////// Переход к конструктору //////////////////////////////
+# ////////////////////////////////// (1 страница ) ///////////////////////////////////
+# ====================================================================================
+
+<ConstructorPageOne>
+    orientation: 'vertical'
+    FloatLayout
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            color: 0, 0, 0, 0.5
+            font_size: self.width/17
+            text: 'Выберете количество вариантов\nтеста'
+            halign: 'left'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.87}
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            size_hint:  0.3, 0.05
+            pos_hint: {'top': 1, 'center_x': 0.3}
+            font_size: self.width/6
+            text: '<--  Назад на туториал'
+
+            on_release:
+                root.switch_back_to_tutorial()
+
+        GridLayout:
+            size_hint: 0.8, 0.1
+            cols: 8
+            pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '1'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '2'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '3'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '4'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '5'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '6'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '7'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '8'
+
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '1')
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '2')
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '3')
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '4')
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '5')
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '6')
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '7')
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_variants(self.active, '8')
+
+
+        Label:
+            color: 0, 0, 0, 0.5
+            font_size: self.width/17
+            text: 'Выберете количество вариантов\nответа'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+
+
+
+        GridLayout:
+            size_hint: 0.8, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.43}
+            cols: 8
+            spacing: 1
+
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '1'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '2'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '3'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '4'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '5'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '6'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '7'
+            Label:
+                color: 0, 0, 0, 0.3
+                font_size: 15
+                text: '8'
+
+            CheckBox:
+                group: 'count_variants'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '1')
+            CheckBox:
+                group: 'count_answers'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '2')
+            CheckBox:
+                group: 'count_answers'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '3')
+            CheckBox:
+                group: 'count_answers'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '4')
+            CheckBox:
+                group: 'count_answers'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '5')
+            CheckBox:
+                group: 'count_answers'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '6')
+            CheckBox:
+                group: 'count_answers'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '7')
+            CheckBox:
+                group: 'count_answers'
+                color: 1, 0, 1, 1
+                on_active:
+                    root.on_click_checkbox_answers(self.active, '8')
+
+        Label:
+            color: 0, 0, 0, 0.5
+            font_size: self.width/17
+            text: 'Выберете количество вопросов'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.25}
+
+        TextInput:
+            id: count_question_input
+            size_hint: 0.3, 0.05
+            font_size: self.width/8
+            pos_hint: {'center_x': 0.5, 'center_y': 0.18}
+
+        Label:
+            color: 0, 0, 0, 0.3
+            font_size: 8
+            text: 'Максимум 46'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.14}
+
+        Button
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 1}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Далее'
+
+            on_release:
+                root.switch_next_screen()
+
+
+# ====================================================================================
+# /////////////////////////////////// Конструктор ////////////////////////////////////
+# ////////////////////////////////// (2 страница ) ///////////////////////////////////
+# ====================================================================================
+
+<ConstructorPageTwo>
+    orientation: 'vertical'
+    FloatLayout
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            color: 0, 0, 0, 0.5
+            font_size: self.width/17
+            text: 'Выберете правильную последова-\nтельность вопросов'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+
+        TextInput:
+            id: order_answers_input
+            size_hint: 0.8, 0.05
+            font_size: self.width/20
+            pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+
+        Button
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 1}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Готово'
+
+            on_release:
+                root.switch_to_check_data_page()
+
+        Button:
+            color: 0.28, 0, 1, 1
+            background_color: [255, 255, 255, 0]
+            pos_hint: {'y': 0, 'right': 0.2}
+            size_hint: 0.2, 0.05
+            font_size: self.width/4
+            text: 'Назад'
+
+            on_release:
+                root.switch_screen_back()
+
+# ====================================================================================
+# //////////////////////// Проверка полученных данных ////////////////////////////////
+# ====================================================================================
+
+
+<CheckDataPage>
+    orientation: 'vertical'
+    FloatLayout
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+
+
+
+# ====================================================================================
+# ///////////////////////////////////// Камера ///////////////////////////////////////
+# ====================================================================================
+
+<CameraPage>
+    FloatLayout:
+        orientation: 'vertical'
+        Camera:
+            id: camera
+            play: True
+
+        Button:
+            text: 'Change camera'
+            size_hint: .2, .1
+
